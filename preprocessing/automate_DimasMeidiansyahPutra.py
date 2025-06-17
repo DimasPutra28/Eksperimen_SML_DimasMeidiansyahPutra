@@ -35,6 +35,6 @@ def preprocess_data(input_path, output_path):
     print(f"Dataset telah diproses dan disimpan di: {output_path}")
 
 if __name__ == "__main__":
-    input_path = "../Student_performance_data.csv"
-    output_path = "../preprocessing/Student_performance_processed_data.csv"
+    input_path = "./Student_performance_data.csv"
+    output_path = "./preprocessing/Student_performance_processed_data.csv"
     preprocess_data(input_path, output_path)
