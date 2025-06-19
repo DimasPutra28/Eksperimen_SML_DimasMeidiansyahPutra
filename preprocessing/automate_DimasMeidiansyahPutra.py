@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
+import os
 
 def preprocess_data(input_path, output_path):
     """
@@ -35,6 +36,10 @@ def preprocess_data(input_path, output_path):
     print(f"Dataset telah diproses dan disimpan di: {output_path}")
 
 if __name__ == "__main__":
-    input_path = "Student_performance_raw_data.csv"
-    output_path = "preprocessing/Student_performance_processed_data.csv"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    root_dir = os.path.dirname(script_dir)
+
+    input_path = os.path.join(root_dir, 'Student_performance_raw_data.csv')
+    output_path = os.path.join(script_dir, 'preprocessing/Student_performance_processed_data.csv')
+
     preprocess_data(input_path, output_path)
