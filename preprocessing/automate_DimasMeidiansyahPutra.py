@@ -40,6 +40,6 @@ if __name__ == "__main__":
     root_dir = os.path.dirname(script_dir)
 
     input_path = os.path.join(root_dir, 'Student_performance_raw_data.csv')
-    output_path = os.path.join(script_dir, 'preprocessing/Student_performance_processed_data.csv')
+    output_path = os.path.join(script_dir, 'Student_performance_processed_data.csv')
 
     preprocess_data(input_path, output_path)
